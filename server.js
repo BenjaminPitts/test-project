@@ -11,15 +11,16 @@ const mongoose = require('mongoose')
 require('dotenv').config()
 const app = express()
 const PORT = process.env.PORT
-const MONGODB_URI = process.env.MONGODB_URI
+const TEST_URI = process.env.TEST_URI
 
 // MIDDLEWARE
 app.use(express.json()) // use .json(), not .urlencoded()
 app.use(cors())
+app.use(express.static('public'))
 
 // DATABASE
 mongoose.connect(
-  MONGODB_URI,
+  TEST_URI,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -27,7 +28,7 @@ mongoose.connect(
     useCreateIndex: true,
   },
   () => {
-    console.log('the connection with mongod is established at', MONGODB_URI)
+    console.log('the connection with mongod is established at', TEST_URI)
   }
 )
 

@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 // TODO: Update to your resource name
 
-const contactSchema = mongoose.Schema(
+const contactSchema = new mongoose.Schema(
   // TODO: update your resource properties
   {
     name: { type: String, required: true },

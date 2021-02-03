@@ -1,0 +1,158 @@
+body {
+  background: #270808;
+  color: ivory;
+  text-align: center;
+}
+img {
+  width: 90%;
+}
+h1 {
+font-family: monospace;
+font-size: 90px;
+padding: 1.5rem;
+margin: 0;
+background: #090909;
+width: 95%;
+text-align: center;
+}
+h1:hover{
+  color: #a52725;
+  transition: 1s;
+}
+h2 {
+  padding: 0;
+  margin: 0;
+}
+h4 {
+  margin: 0;
+  padding: 0;
+}
+i {
+  color: gold;
+}
+a {
+  text-decoration: none;
+  color: ivory;
+}
+a:hover {
+  color: gold;
+}
+button{
+  border-radius: 10px;
+  background: ivory;
+  font-weight:bold;
+  font-size:16px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: monospace;
+  text-align: center;
+}
+form {
+text-align:end;
+}
+input {
+  border-radius: 10px;
+  background: ivory;
+  font-size: 18px;
+}
+details {
+  font-family: monospace;
+  font-size: 18px;
+}
+input:hover {
+  background: gold;
+}
+button:hover{
+  background:red;
+}
+img:hover{
+  cursor: pointer;
+}
+details:hover {
+  cursor: pointer;
+}
+.item:hover {
+ border-radius:10px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.itemBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  position:relative;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+.create {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+}
+.footer {
+  background: #090909;
+}
+#bigger {
+  font-family: monospace;
+  font-size: 35px;
+}
+
+
+@media screen and (max-width: 600px) {
+h1 {
+    font-size: 60px;
+  }
+.item {
+    position:relative;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+  }
+.itemBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+button {
+width:50%;
+}
+button:hover {
+  width:80%;
+}
+.item:hover {
+  width:95%;
+  }
+
+
+}

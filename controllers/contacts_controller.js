@@ -14,9 +14,12 @@ contacts.post('/', (req, res) => {
   Contact.create(req.body, (error, createdContact) => {
     if (error) {
       res.status(400).json({ error: error })
+    } else {
+      Contact.find({}, (error, createdContact)=>{
+        res.json(createdContact)
+      })
     }
-    res.status(200).send(createdContact)
-  })
+   })
 })
 
 // READ
@@ -26,9 +29,10 @@ contacts.get('/', (req, res) => {
   Contact.find({}, (error, foundContacts) => {
     if (error) {
       res.status(400).json({ error: error })
+    } else {
+    res.json(foundContacts)
     }
-    res.status(200).json(foundContacts)
-  })
+   })
 })
 
 // UPDATE
@@ -42,8 +46,11 @@ contacts.put('/:id', (req, res) => {
     (err, updatedContact) => {
       if (err) {
         res.status(400).json({ error: err.message })
+      } else {
+        Contact.find({}, (err, updatedContact)=>{
+          res.json(updatedContact)
+        })
       }
-      res.status(200).json(updatedContact)
     }
   )
 })
@@ -55,8 +62,11 @@ contacts.delete('/:id', (req, res) => {
   Contact.findByIdAndRemove(req.params.id, (error, deletedContact) => {
     if (error) {
       res.status(400).json({ error: error })
+    } else {
+      Contact.find({}, (err, deletedContact)=>{
+        res.json(deletedContact)
+      })
     }
-    res.status(200).json(deletedContact)
   })
 })
 
