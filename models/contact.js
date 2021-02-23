@@ -2,14 +2,16 @@ const mongoose = require('mongoose')
 
 // TODO: Update to your resource name
 
-const contactSchema = new mongoose.Schema(
+const quizSchema = new mongoose.Schema(
   // TODO: update your resource properties
   {
-    name: { type: String, required: true },
-    age: { type: Number, default: 0 }
-  },
-  { timestamps: true }
+    question: { type: String, required: true },
+    answer: { type: String, required: true },
+    answer_char: {type: String, required: true},
+    point_value: {type: Number, required: true}
+  }
+
 )
 
 // TODO: update your model
-module.exports = mongoose.model('Contact', contactSchema)
+module.exports = mongoose.model('Quiz', quizSchema)

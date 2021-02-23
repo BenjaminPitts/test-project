@@ -41,10 +41,10 @@ mongoose.connection.on('disconnected', () => console.log('mongo disconnected'))
 // TODO: Update controllers/routes to your resources
 // CONTROLLERS/ROUTES
 const contactsController = require('./controllers/contacts_controller.js')
-app.use('/contacts', contactsController)
+app.use('/quiz', contactsController)
 
 app.get('/*', (req, res) => {
-  res.redirect('/contacts')
+  res.redirect('/quiz')
 })
 
 // LISTEN
